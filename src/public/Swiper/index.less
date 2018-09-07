@@ -1,0 +1,88 @@
+.swiper-container {
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    .swiper-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 100%;
+        .swiper-item {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            flex-shrink: 0;
+        }
+    }
+    .dot-wrap {
+        position: absolute;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        bottom: 10px;
+        left: 50%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        transform: translate3d(-50%, 0, 0);
+
+        .iner {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fff;
+            margin: 0 3px;
+            cursor: pointer;
+
+            &.on {
+                background: #007fff;
+            }
+        }
+    }
+    .arrowBtn {
+        width: 75px;
+        height: 75px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.5);
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        transition: all 0.5s ease-in-out;
+        z-index: 99;
+        cursor: pointer;
+
+        .inAr {
+            width: 35px;
+            height: 35px;
+            display: block;
+            border: 3px solid #666;
+            position: relative;
+        }
+        &:hover { .inAr { border-color: #007fff; }}
+        &.left {
+            left: -85px;
+            .inAr {
+                border-right: transparent;
+                border-bottom: transparent;
+                transform: rotate(-45deg);
+                left: 8px;
+            }
+            &.show {
+                left: 10px;
+            }
+        }
+        &.right {
+            right: -85px;
+            .inAr {
+                border-left: transparent;
+                border-bottom: transparent;
+                transform: rotate(45deg);
+                right: 12px;
+            }
+            &.show {
+                right: 10px;
+            }
+        }
+    }
+}
