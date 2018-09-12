@@ -11,7 +11,7 @@ const path = require('path');
 
 module.exports = {
     contentPath: path.resolve(__dirname, '../'),
-    title: 'maron-cli',
+    title: 'react-stack',
     singlePage: true,
     enableHotReload: true,
     getEntry() {
